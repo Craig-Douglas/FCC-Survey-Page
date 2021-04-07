@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Moab 240 Sign-up form</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="race sign up form">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1 id="title"> Moab 240 Sign-Up Form</h1>
+        <p id="description">Enter your details to sign up for the toughest race on Earth</p>
+
+        <form id="survey-form">
+            <ul>
+                <li class="info-labels" ><label id="name-label">Name</label></li>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                <li class="info-labels" ><label id="email-label">E-mail</label></li>
+                    <input type="email" id="email" placeholder="Enter your e-mail" required>
+                <li class="info-labels"><label id="number-label">Age</label></li>
+                    <input type="number" id="number" min="1" max="99"  placeholder="Enter" required>
+
+                <li class="info-labels" ><label id="dropdown-label">How did you hear about us?</label></li>
+                    <select id="dropdown" name="role" class="form-control" required>
+                      <option disabled selected value>I heard via.......</option>
+                      <option value="student">Runners World</option>
+                      <option value="job">Web Article</option>
+                      <option value="learner">Podcast</option>
+                      <option value="preferNo">Goggins!</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                </li>
+
+                <li id="first-time" class="info-labels" required >First Time Runner?</li>
+                    <input type="radio" name="first-time" id="Newbie" value="Newbie"> 
+                    <label for="Newbie">Newbie</label><br>
+                    <input type="radio" name="first-time" id="Veteran" value="Veteran"> 
+                    <label for="Veteran">Veteran</label><br>
+
+                <li id="support" class="info-labels">Who do you have supporting your run
+                        (Check all that apply)</li>
+              
+                    <label><input name="prefer" value="Family" type="checkbox" class="input-checkbox" />Family</label>
+                    <label><input name="prefer" value="Friends" type="checkbox" class="input-checkbox" />Friends</label>
+                    <label><input name="prefer" value="Professional" type="checkbox" class="input-checkbox" />Pro Support Crew</label>
+                    <label><input name="prefer" value="Lone" type="checkbox" class="input-checkbox" />Lone-Wolfing</label><br>
+                
+
+
+
+
+                
+                <li id="textarea" class="info-labels">Why do you want to put yourself through this?</li>
+                <label><textarea id="why" name="why" rows="4" cols="50">WHY ????????</textarea></label>
+            </ul><br>
+
+
+            <div>
+                <button class="btn" id="submit">Let's Go!</button>  
+            </div>
+            
+            
+        </form>
+    
+       
+       
+    </body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+</html>
